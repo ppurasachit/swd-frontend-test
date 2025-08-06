@@ -1,7 +1,7 @@
 // src/app/page.tsx
 'use client';
 
-import React from 'react';
+import React, { useEffect, useState } from 'react';
 import { Card, Row, Col } from 'antd';
 import { BgColorsOutlined, FormOutlined } from '@ant-design/icons';
 import { useRouter } from 'next/navigation';
@@ -10,16 +10,22 @@ import './home.scss';
 
 const { Meta } = Card;
 
-const HomePage: React.FC = () => {
+export default function HomePage() {
   const router = useRouter();
-  const { t, ready } = useTranslation();
+  const { t } = useTranslation();
+  const [mounted, setMounted] = useState(false);
+
+  // ป้องกัน hydration error
+  useEffect(() => {
+    setMounted(true);
+  }, []);
 
   const handleNavigate = (path: string) => {
     router.push(path);
   };
 
-  // Wait for translations to be ready
-  if (!ready) {
+  // แสดง loading จนกว่าจะ mount เสร็จ
+  if (!mounted) {
     return <div className="loading">Loading...</div>;
   }
 
@@ -65,6 +71,4 @@ const HomePage: React.FC = () => {
       </Row>
     </div>
   );
-};
-
-export default HomePage;
+}

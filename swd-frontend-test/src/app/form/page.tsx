@@ -813,7 +813,11 @@ const TableComponent: React.FC = () => {
                     showSizeChanger: false,
                     showQuickJumper: false,
                     showTotal: (total, range) =>
-                        t('form.table.showTotal') || `${range[0]}-${range[1]} of ${total} items`,
+                        t('form.table.showTotal', { 
+                            range0: range[0], 
+                            range1: range[1], 
+                            total: total 
+                        }),
                     className: styles.pagination,
                 }}
                 locale={{

@@ -1,0 +1,132 @@
+{
+    "home": {
+      "title": "เลือกแบบทดสอบ",
+      "test1": {
+        "title": "ทดสอบ 1",
+        "description": "เลย์เอาท์และสไตล์"
+      },
+      "test2": {
+        "title": "ทดสอบ 2",
+        "description": "ฟอร์มและตาราง"
+      }
+    },
+    "style": {
+      "title": "ทดสอบเลย์เอาท์และสไตล์",
+      "backToHome": "กลับสู่หน้าแรก",
+      "moveShape": "เลื่อนรูปทรง",
+      "movePosition": "เลื่อนตำแหน่ง",
+      "randomPosition": "สุ่มตำแหน่ง",
+      "shapes": {
+        "circle": "วงกลม",
+        "square": "สี่เหลี่ยมจัตุรัส",
+        "triangle": "สามเหลี่ยม",
+        "rectangle": "สี่เหลี่ยมผืนผ้า",
+        "oval": "รูปไข่",
+        "trapezoid": "สี่เหลี่ยมคางหมู",
+        "parallelogram": "สี่เหลี่ยมด้านขนาน",
+        "rightTriangle": "สามเหลี่ยมมุมฉาก"
+      }
+    },
+    "form": {
+      "title": "จัดการฟอร์มผู้ใช้",
+      "backToHome": "กลับสู่หน้าแรก",
+      "loadMockData": "โหลดข้อมูลตัวอย่าง (20 ผู้ใช้)",
+      "clearAllData": "ล้างข้อมูลทั้งหมด",
+      "currentDataCount": "จำนวนข้อมูลปัจจุบัน",
+      "addPerson": "เพิ่มบุคคล",
+      "editPerson": "แก้ไขบุคคล",
+      "deletePerson": "ลบบุคคล",
+      "confirmDelete": "คุณแน่ใจหรือไม่ที่จะลบรายการนี้?",
+      "confirmBulkDelete": "คุณแน่ใจหรือไม่ที่จะลบข้อมูล {{count}} รายการที่เลือก?",
+      "form": {
+        "title": "คำนำหน้า",
+        "firstName": "ชื่อจริง",
+        "lastName": "นามสกุล",
+        "birthday": "วันเกิด",
+        "nationality": "สัญชาติ",
+        "citizenId": "เลขบัตรประชาชน",
+        "gender": "เพศ",
+        "mobilePhone": "หมายเลขโทรศัพท์มือถือ",
+        "passportNo": "หนังสือเดินทาง",
+        "expectedSalary": "เงินเดือนที่คาดหวัง",
+        "save": "บันทึก",
+        "cancel": "ยกเลิก",
+        "edit": "อัพเดท",
+        "delete": "ลบ",
+        "selectAll": "เลือกทั้งหมด",
+        "deleteSelected": "ลบที่เลือก",
+        "male": "ชาย",
+        "female": "หญิง",
+        "unisex": "ไม่ระบุ",
+        "placeholders": {
+          "selectTitle": "เลือกคำนำหน้า",
+          "enterFirstName": "กรอกชื่อจริง",
+          "enterLastName": "กรอกนามสกุล",
+          "selectBirthday": "เลือกวันเกิด",
+          "selectNationality": "เลือกสัญชาติ",
+          "enterPhone": "กรอกหมายเลขโทรศัพท์",
+          "enterPassport": "กรอกหมายเลขหนังสือเดินทาง",
+          "enterSalary": "กรอกเงินเดือนที่คาดหวัง"
+        },
+        "titles": {
+          "mr": "นาย",
+          "mrs": "นาง",
+          "ms": "นางสาว"
+        },
+        "nationalities": {
+          "thai": "ไทย",
+          "american": "อเมริกัน",
+          "british": "อังกฤษ",
+          "chinese": "จีน",
+          "japanese": "ญี่ปุ่น",
+          "other": "อื่นๆ"
+        },
+        "validations": {
+          "firstNameRequired": "กรุณากรอกชื่อจริง!",
+          "lastNameRequired": "กรุณากรอกนามสกุล!",
+          "citizenIdRequired": "กรุณากรอกเลขบัตรประชาชน!",
+          "citizenIdInvalid": "กรุณากรอกเลขบัตรประชาชนให้ถูกต้อง!",
+          "birthdayRequired": "กรุณาเลือกวันเกิด!",
+          "nationalityRequired": "กรุณาเลือกสัญชาติ!",
+          "genderRequired": "กรุณาเลือกเพศ!",
+          "mobilePhoneRequired": "กรุณากรอกหมายเลขโทรศัพท์มือถือ!",
+          "mobilePhoneInvalid": "กรุณากรอกหมายเลขโทรศัพท์ให้ถูกต้อง!",
+          "passportInvalid": "กรุณากรอกหมายเลขหนังสือเดินทางให้ถูกต้อง!",
+          "expectedSalaryRequired": "กรุณากรอกเงินเดือนที่คาดหวัง!",
+          "expectedSalaryInvalid": "กรุณากรอกจำนวนเงินให้ถูกต้อง!",
+          "titleRequired": "กรุณาเลือกคำนำหน้า!"
+        }
+      },
+      "table": {
+        "no": "ลำดับ",
+        "name": "ชื่อ",
+        "gender": "เพศ",
+        "phone": "โทรศัพท์",
+        "nationality": "สัญชาติ",
+        "actions": "การดำเนินการ",
+        "noData": "ไม่มีข้อมูล",
+        "showTotal": "{{range0}}-{{range1}} จาก {{total}} รายการ"
+      },
+      "messages": {
+        "saveSuccess": "บันทึกข้อมูลสำเร็จ!",
+        "updateSuccess": "อัพเดทข้อมูลสำเร็จ!",
+        "deleteSuccess": "ลบข้อมูลสำเร็จ!",
+        "bulkDeleteSuccess": "ลบข้อมูล {{count}} รายการสำเร็จ!",
+        "deleteError": "ไม่สามารถลบข้อมูลได้",
+        "mockDataLoaded": "โหลดข้อมูลตัวอย่างสำเร็จ!",
+        "allDataCleared": "ล้างข้อมูลทั้งหมดสำเร็จ!"
+      }
+    },
+    "common": {
+      "language": "ภาษา",
+      "english": "English",
+      "thai": "ไทย",
+      "confirm": "ยืนยัน",
+      "cancel": "ยกเลิก",
+      "ok": "ตกลง",
+      "yes": "ใช่",
+      "no": "ไม่",
+      "loading": "กำลังโหลด...",
+      "currency": "บาท"
+    }
+  }

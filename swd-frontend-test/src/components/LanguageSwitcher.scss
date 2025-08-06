@@ -1,0 +1,91 @@
+// src/components/LanguageSwitcher.scss
+.language-switcher {
+    position: fixed;
+    top: 20px;
+    right: 20px;
+    z-index: 1000;
+    
+    .language-select {
+      min-width: 120px;
+      
+      .ant-select-selector {
+        background: rgba(255, 255, 255, 0.9);
+        border: 1px solid rgba(255, 255, 255, 0.3);
+        border-radius: 8px;
+        backdrop-filter: blur(10px);
+        transition: all 0.3s ease;
+        
+        &:hover {
+          background: rgba(255, 255, 255, 0.95);
+          border-color: #FFA200;
+        }
+      }
+      
+      &.ant-select-focused {
+        .ant-select-selector {
+          border-color: #FFA200;
+          box-shadow: 0 0 0 2px rgba(255, 162, 0, 0.2);
+        }
+      }
+      
+      .ant-select-selection-item {
+        display: flex;
+        align-items: center;
+        
+        .language-option {
+          display: flex;
+          align-items: center;
+          gap: 8px;
+          
+          .flag {
+            font-size: 16px;
+          }
+          
+          .label {
+            font-weight: 500;
+          }
+        }
+      }
+    }
+  }
+  
+  // Dropdown styles
+  .language-dropdown {
+    .ant-select-item {
+      .language-option {
+        display: flex;
+        align-items: center;
+        gap: 8px;
+        
+        .flag {
+          font-size: 16px;
+        }
+        
+        .label {
+          font-weight: 500;
+        }
+      }
+      
+      &:hover {
+        background: linear-gradient(135deg, rgba(110, 218, 120, 0.1), rgba(255, 162, 0, 0.1));
+      }
+      
+      &.ant-select-item-option-selected {
+        background: linear-gradient(135deg, rgba(110, 218, 120, 0.2), rgba(255, 162, 0, 0.2));
+        color: #333;
+        font-weight: 600;
+      }
+    }
+  }
+  
+  // Mobile responsive
+  @media (max-width: 768px) {
+    .language-switcher {
+      top: 10px;
+      right: 10px;
+      
+      .language-select {
+        min-width: 100px;
+      }
+    }
+  }

@@ -1,0 +1,384 @@
+// src/app/style/style.module.scss
+.stylePage {
+    width: 100%;
+    color: white;
+  }
+  
+  .headerSection {
+    margin-bottom: 2rem;
+  }
+  
+  .backButton {
+    margin-bottom: 1rem;
+    background: rgba(255, 255, 255, 0.2);
+    border: 1px solid rgba(255, 255, 255, 0.3);
+    backdrop-filter: blur(10px);
+    
+    &:hover {
+      background: rgba(255, 255, 255, 0.3);
+      border-color: rgba(255, 255, 255, 0.5);
+    }
+  }
+  
+  .pageTitle {
+    color: white;
+    font-size: 2.5rem;
+    font-weight: bold;
+    margin: 0;
+    text-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    
+    @media (max-width: 768px) {
+      font-size: 2rem;
+    }
+  }
+  
+  .controlsSection {
+    margin-bottom: 3rem;
+  }
+  
+  .controlButton {
+    min-width: 150px;
+    height: 45px;
+    font-size: 1rem;
+    font-weight: 600;
+    border-radius: 12px;
+    box-shadow: 0 4px 16px rgba(0, 0, 0, 0.1);
+    transition: all 0.3s ease;
+    
+    @media (max-width: 768px) {
+      min-width: 120px;
+      height: 40px;
+      font-size: 0.9rem;
+    }
+  }
+  
+  .moveLeft {
+    background: #6EDA78;
+    border-color: #6EDA78;
+    
+    &:hover {
+      transform: scale(1.05);
+      box-shadow: 0 6px 20px rgba(107, 218, 120, 0.3);
+    }
+  }
+  
+  .switchRows {
+    background: #007BFF;
+    border-color: #007BFF;
+    
+    &:hover {
+      transform: scale(1.05);
+      box-shadow: 0 6px 20px rgba(0, 123, 255, 0.3);
+    }
+  }
+  
+  .moveRight {
+    background: #28a745;
+    border-color: #28a745;
+    
+    &:hover {
+      transform: scale(1.05);
+      box-shadow: 0 6px 20px rgba(40, 167, 69, 0.3);
+    }
+  }
+  
+  .shapesContainer {
+    max-width: 1000px;
+    margin: 0 auto;
+    padding: 0 2rem;
+  }
+  
+  .shapesRow {
+    margin-bottom: 2rem;
+    transition: all 0.6s ease;
+    
+    &:last-child {
+      margin-bottom: 0;
+    }
+  }
+  
+  // การจัดเรียงแถว - แถวบนจัดกึ่งกลาง แถวล่างเยื้องซ้าย
+  .topRow {
+    justify-content: center !important;
+    padding-left: 0;
+    margin-left: 0;
+  }
+  
+  .bottomRow {
+    justify-content: flex-start !important;
+    margin-left: 90px; // เยื้องซ้ายประมาณครึ่งหนึ่งของการ์ด
+    
+    @media (max-width: 768px) {
+      margin-left: 75px;
+    }
+    
+    @media (max-width: 576px) {
+      margin-left: 60px;
+    }
+  }
+  
+  .shapeCol {
+    flex: 0 0 auto;
+    width: auto;
+  }
+  
+  .shapeCard {
+    background: rgba(255, 255, 255, 0.95);
+    border: none;
+    border-radius: 16px;
+    overflow: hidden;
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+    cursor: pointer;
+    animation: fadeInUp 0.5s ease;
+    width: 200px; 
+    
+    @media (max-width: 768px) {
+      width: 150px;
+    }
+    
+    @media (max-width: 576px) {
+      width: 120px;
+    }
+    
+    &:hover {
+      transform: scale(1.05);
+      box-shadow: 0 8px 30px rgba(0, 0, 0, 0.2);
+      
+      .shapeContainer {
+        background: linear-gradient(135deg, #FFA200 0%, #ff8f00 100%); // เปลี่ยนเป็นสีส้ม
+      }
+    }
+    
+    :global(.ant-card-body) {
+      padding: 0;
+    }
+  }
+  
+  .shapeContainer {
+    width: 100%;
+    height: 140px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: linear-gradient(135deg, #f8f9fa 0%, #e9ecef 100%);
+    padding: 20px;
+    position: relative;
+    transition: all 0.3s ease; // เพิ่ม transition สำหรับ background
+    
+    @media (max-width: 768px) {
+      height: 120px;
+      padding: 15px;
+    }
+    
+    @media (max-width: 576px) {
+      height: 100px;
+      padding: 10px;
+    }
+  }
+  
+  // Shape styles - ปรับอัตราส่วนให้ตรงตามดีไซน์
+  .shape {
+    transition: all 0.3s ease;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: auto; // เพิ่มเพื่อจัดกึ่งกลาง
+  }
+  
+  .circle {
+    width: 90px; // ลดขนาดลงเล็กน้อย
+    height: 90px;
+    border-radius: 50%;
+    background: #6c757d;
+    transition: all 0.3s ease;
+    margin: auto; // จัดกึ่งกลาง
+    
+    @media (max-width: 768px) {
+      width: 72px;
+      height: 72px;
+    }
+    
+    @media (max-width: 576px) {
+      width: 54px;
+      height: 54px;
+    }
+  }
+  
+  .square {
+    width: 90px; // ลดขนาดลงเล็กน้อย
+    height: 90px;
+    background: #6c757d;
+    transition: all 0.3s ease;
+    margin: auto; // จัดกึ่งกลาง
+    
+    @media (max-width: 768px) {
+      width: 72px;
+      height: 72px;
+    }
+    
+    @media (max-width: 576px) {
+      width: 54px;
+      height: 54px;
+    }
+  }
+  
+  .rectangle {
+    width: 120px; // ลดขนาดลงเล็กน้อย
+    height: 70px;
+    background: #6c757d;
+    transition: all 0.3s ease;
+    margin: auto; // จัดกึ่งกลาง
+    
+    @media (max-width: 768px) {
+      width: 95px;
+      height: 55px;
+    }
+    
+    @media (max-width: 576px) {
+      width: 75px;
+      height: 45px;
+    }
+  }
+  
+  .triangle {
+    width: 0;
+    height: 0;
+    border-left: 50px solid transparent;
+    border-right: 50px solid transparent;
+    border-bottom: 85px solid #6c757d;
+    transition: all 0.3s ease;
+    // ใช้ margin auto แทน position absolute
+    margin: 0 auto;
+    
+    @media (max-width: 768px) {
+      border-left-width: 40px;
+      border-right-width: 40px;
+      border-bottom-width: 68px;
+    }
+    
+    @media (max-width: 576px) {
+      border-left-width: 30px;
+      border-right-width: 30px;
+      border-bottom-width: 51px;
+    }
+  }
+  
+  .rightTriangle {
+    width: 0;
+    height: 0;
+    border-top: 85px solid transparent;
+    border-right: 85px solid #6c757d;
+    border-bottom: 85px solid transparent;
+    transition: all 0.3s ease;
+    margin: 0 auto;
+    
+    @media (max-width: 768px) {
+      border-top-width: 68px;
+      border-right-width: 68px;
+      border-bottom-width: 68px;
+    }
+    
+    @media (max-width: 576px) {
+      border-top-width: 51px;
+      border-right-width: 51px;
+      border-bottom-width: 51px;
+    }
+  }
+  
+  .oval {
+    width: 120px; 
+    height: 70px;
+    border-radius: 50%;
+    background: #6c757d;
+    transition: all 0.3s ease;
+    margin: auto; // จัดกึ่งกลาง
+    
+    @media (max-width: 768px) {
+      width: 95px;
+      height: 55px;
+    }
+    
+    @media (max-width: 576px) {
+      width: 75px;
+      height: 45px;
+    }
+  }
+  
+  .trapezoid {
+    width: 120px;
+    height: 0;
+    border-bottom: 70px solid #6c757d;
+    border-left: 30px solid transparent;
+    border-right: 30px solid transparent;
+    transition: all 0.3s ease;
+    // ใช้ margin auto แทน position absolute
+    margin: 0 auto;
+    
+    @media (max-width: 768px) {
+      width: 96px;
+      border-bottom-width: 56px;
+      border-left-width: 24px;
+      border-right-width: 24px;
+    }
+    
+    @media (max-width: 576px) {
+      width: 72px;
+      border-bottom-width: 42px;
+      border-left-width: 18px;
+      border-right-width: 18px;
+    }
+  }
+  
+  .parallelogram {
+    width: 100px; // ลดขนาดลง
+    height: 70px;
+    background: #6c757d;
+    transform: skew(-20deg);
+    transition: all 0.3s ease;
+    margin: auto; // จัดกึ่งกลาง
+    
+    @media (max-width: 768px) {
+      width: 80px;
+      height: 56px;
+    }
+    
+    @media (max-width: 576px) {
+      width: 60px;
+      height: 42px;
+    }
+  }
+  
+  // Animation keyframes
+  @keyframes fadeInUp {
+    from {
+      opacity: 0;
+      transform: translateY(20px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+  
+  // Mobile responsive adjustments
+  @media (max-width: 768px) {
+    .shapesContainer {
+      padding: 0 1rem;
+    }
+  }
+  
+  @media (max-width: 576px) {
+    .controlsSection {
+      :global(.ant-row) {
+        :global(.ant-col) {
+          width: 100%;
+          margin-bottom: 0.5rem;
+          
+          .controlButton {
+            width: 100%;
+          }
+        }
+      }
+    }
+  }

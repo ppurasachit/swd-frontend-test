@@ -1,0 +1,55 @@
+// src/app/layout.scss
+.app-layout {
+    min-height: 100vh;
+    width: 100%;
+    
+    .gradient-background {
+      min-height: 100vh;
+      background: linear-gradient(135deg, #6EDA78 0%, #FFA200 100%);
+      
+      .content-wrapper {
+        width: 100%;
+        max-width: 1200px;
+        margin: 0 auto;
+        padding: 2rem;
+        min-height: 100vh;
+        
+        // Auto layout - let content determine its own layout
+        &.auto-layout {
+          display: flex;
+          flex-direction: column;
+        }
+        
+        // For pages that need centered content (like home)
+        &.centered {
+          display: flex;
+          flex-direction: column;
+          justify-content: center;
+          align-items: center;
+        }
+        
+        // For pages that need top-aligned content (like forms)
+        &.top-aligned {
+          display: flex;
+          flex-direction: column;
+          justify-content: flex-start;
+          padding-top: 4rem;
+        }
+      }
+    }
+  }
+  
+  // Responsive adjustments
+  @media (max-width: 768px) {
+    .app-layout {
+      .gradient-background {
+        .content-wrapper {
+          padding: 1rem;
+          
+          &.top-aligned {
+            padding-top: 2rem;
+          }
+        }
+      }
+    }
+  }

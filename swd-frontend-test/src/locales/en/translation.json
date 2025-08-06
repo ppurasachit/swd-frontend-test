@@ -1,0 +1,132 @@
+{
+    "home": {
+      "title": "Select Test",
+      "test1": {
+        "title": "Test 1",
+        "description": "Layout & Style"
+      },
+      "test2": {
+        "title": "Test 2",
+        "description": "Form & Table"
+      }
+    },
+    "style": {
+      "title": "Layout & Style Test",
+      "backToHome": "Back to Home",
+      "moveShape": "Move Shape",
+      "movePosition": "Move Position",
+      "randomPosition": "Random Position",
+      "shapes": {
+        "circle": "Circle",
+        "square": "Square",
+        "triangle": "Triangle",
+        "rectangle": "Rectangle",
+        "oval": "Oval",
+        "trapezoid": "Trapezoid",
+        "parallelogram": "Parallelogram",
+        "rightTriangle": "Right Triangle"
+      }
+    },
+    "form": {
+      "title": "User Form Management",
+      "backToHome": "Back to Home",
+      "loadMockData": "Load Mock Data (20 users)",
+      "clearAllData": "Clear All Data",
+      "currentDataCount": "Current records",
+      "addPerson": "Add Person",
+      "editPerson": "Edit Person",
+      "deletePerson": "Delete Person",
+      "confirmDelete": "Are you sure you want to delete this item?",
+      "confirmBulkDelete": "Are you sure you want to delete {{count}} selected items?",
+      "form": {
+        "title": "Title",
+        "firstName": "First Name",
+        "lastName": "Last Name",
+        "birthday": "Birthday",
+        "nationality": "Nationality",
+        "citizenId": "Citizen ID",
+        "gender": "Gender",
+        "mobilePhone": "Mobile Phone",
+        "passportNo": "Passport No.",
+        "expectedSalary": "Expected Salary",
+        "save": "Save",
+        "cancel": "Cancel",
+        "edit": "Update",
+        "delete": "Delete",
+        "selectAll": "Select All",
+        "deleteSelected": "Delete Selected",
+        "male": "Male",
+        "female": "Female",
+        "unisex": "Unisex",
+        "placeholders": {
+          "selectTitle": "Select title",
+          "enterFirstName": "Enter first name",
+          "enterLastName": "Enter last name",
+          "selectBirthday": "Select birthday",
+          "selectNationality": "Select nationality",
+          "enterPhone": "Enter phone number",
+          "enterPassport": "Enter passport number",
+          "enterSalary": "Enter expected salary"
+        },
+        "titles": {
+          "mr": "Mr.",
+          "mrs": "Mrs.",
+          "ms": "Ms."
+        },
+        "nationalities": {
+          "thai": "Thai",
+          "american": "American",
+          "british": "British",
+          "chinese": "Chinese",
+          "japanese": "Japanese",
+          "other": "Other"
+        },
+        "validations": {
+          "firstNameRequired": "Please enter first name!",
+          "lastNameRequired": "Please enter last name!",
+          "citizenIdRequired": "Please enter citizen ID!",
+          "citizenIdInvalid": "Invalid citizen ID format!",
+          "birthdayRequired": "Please select birthday!",
+          "nationalityRequired": "Please select nationality!",
+          "genderRequired": "Please select gender!",
+          "mobilePhoneRequired": "Please enter mobile phone!",
+          "mobilePhoneInvalid": "Invalid phone format!",
+          "passportInvalid": "Invalid passport format!",
+          "expectedSalaryRequired": "Please enter expected salary!",
+          "expectedSalaryInvalid": "Invalid salary amount!",
+          "titleRequired": "Please select title!"
+        }
+      },
+      "table": {
+        "no": "No.",
+        "name": "Name",
+        "gender": "Gender",
+        "phone": "Phone",
+        "nationality": "Nationality",
+        "actions": "Actions",
+        "noData": "No data available",
+        "showTotal": "{{range0}}-{{range1}} of {{total}} items"
+      },
+      "messages": {
+        "saveSuccess": "Saved successfully!",
+        "updateSuccess": "Updated successfully!",
+        "deleteSuccess": "Deleted successfully!",
+        "bulkDeleteSuccess": "Deleted {{count}} items successfully!",
+        "deleteError": "Failed to delete data",
+        "mockDataLoaded": "Mock data loaded successfully!",
+        "allDataCleared": "All data cleared successfully!"
+      }
+    },
+    "common": {
+      "language": "Language",
+      "english": "English",
+      "thai": "ไทย",
+      "confirm": "Confirm",
+      "cancel": "Cancel",
+      "ok": "OK",
+      "yes": "Yes",
+      "no": "No",
+      "loading": "Loading...",
+      "currency": "THB"
+    }
+  }
